@@ -9,6 +9,10 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  def create
+    User.create!(user_params)
+  end
+
   def update
     binding.pry
     @user = User.find(params[:id])
